@@ -1,0 +1,26 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    font-size: 20px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #6f4e37;
+    font-family: cursive, sans-serif;
+}
+.container{
+    align-self: center;
+}
+.name{
+    margin-bottom: 5px;
+    color: #fff5ee;
+}
+.user-name{
+    width: 100%;
+    border: 3px solid #fff5ee;
+    border-radius: 8px;
+    height: 30px;
+}
