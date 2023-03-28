@@ -13,7 +13,6 @@ body{
     font-family: cursive, sans-serif;
 }
 .lib{
-    color: #fff5ee;
     background-color: #362010;
     text-align: center;
     padding: 8px 0;
@@ -28,7 +27,6 @@ body{
 }
 .name{
     margin-bottom: 5px;
-    color: #fff5ee;
 }
 .user-name{
     width: 100%;
@@ -54,7 +52,6 @@ button{
 }
 .footer{
     background-color: #362010;
-    color: #fff5ee;
     text-align: center;
     padding: 5px 0;
 }

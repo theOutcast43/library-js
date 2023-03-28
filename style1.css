@@ -15,7 +15,6 @@ body{
     gap: 10px;
 }
 .lib-title{
-    color: #fff5ee;
     background-color: #362010;
     text-align: center;
     padding: 8px 0;
@@ -23,11 +22,12 @@ body{
 }
 #container{
     align-self: center;
-    width: 80%;
+    width: 100%;
     display: grid;
     height: 100vh;
     border: 20px solid #362010;
-    border-radius: 10px;
+    border-left: none;
+    border-right: none;
 }
 .big{
     font-size: 1.5rem;
@@ -43,6 +43,8 @@ body{
     display: grid;
     place-content: center;
     border: 5px solid #362010;
+    border-left: none;
+    border-right: none;
 }
 .sections:hover{
     background-color: aqua;
@@ -52,14 +54,17 @@ body{
 }
 .footer{
     background-color: #362010;
-    color: #fff5ee;
     text-align: center;
     padding: 5px 0;
-}
-.footer > a{
-    text-decoration: none;
 }
 .footer > a:hover{
     text-decoration: underline;
     color: aqua;
+}
+
+/* Mobile UI */
+@media screen and (max-width: 425px){
+    #container{
+        width: 100%;
+    }
 }
