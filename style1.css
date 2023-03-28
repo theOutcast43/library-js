@@ -36,6 +36,9 @@ body{
 .white{
     color: #fff;
 }
+.no-uline{
+    text-decoration: none;
+}
 .sections{
     display: grid;
     place-content: center;
@@ -43,6 +46,9 @@ body{
 }
 .sections:hover{
     background-color: aqua;
+}
+.sections > a:hover{
+    color: #6f4e37;
 }
 .footer{
     background-color: #362010;
