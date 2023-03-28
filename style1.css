@@ -12,43 +12,37 @@ body{
     background-color: #6f4e37;
     font-family: cursive, sans-serif;
     font-size: 16px;
+    gap: 10px;
 }
-.lib{
+.lib-title{
     color: #fff5ee;
     background-color: #362010;
     text-align: center;
     padding: 8px 0;
     font-family: serif;
 }
-.container{
+#container{
     align-self: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    width: 80%;
+    display: grid;
     height: 100vh;
+    border: 20px solid #362010;
+    border-radius: 10px;
 }
-.name{
-    margin-bottom: 5px;
-    color: #fff5ee;
-}
-.user-name{
-    width: 100%;
-    border: 3px solid #fff5ee;
-    border-radius: 8px;
-    height: 50px;
+.big{
     font-size: 1.5rem;
-    text-align: center;
+    font-weight: 900;
 }
-.go{
-    width: 100%;
-    background-color: rgb(29, 165, 29);
-    cursor: pointer;
-    border-radius: 8px;
-    height: 30px;
-    margin-top: 10px;
-    border: 1px solid rgb(29, 165, 29);
+.white{
     color: #fff;
-    font-size: 1.25rem;
+}
+.sections{
+    display: grid;
+    place-content: center;
+    border: 5px solid #362010;
+}
+.sections:hover{
+    background-color: aqua;
 }
 .footer{
     background-color: #362010;
@@ -57,7 +51,6 @@ body{
     padding: 5px 0;
 }
 .footer > a{
-    color: #fff;
     text-decoration: none;
 }
 .footer > a:hover{
