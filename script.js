@@ -4,7 +4,7 @@ const username = document.getElementById('username');
 // username.onkeyup = handleKeyboardInput;
 username.onkeydown = submit;
 function submit(e) {
-    if (e.key == 'Enter' || e.code == 13) {
+    if (e.key == 'Enter') {
         e.preventDefault()
     handleKeyboardInput()
     }
