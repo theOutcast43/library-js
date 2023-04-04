@@ -6,17 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="images/library_books_FILL0_wght400_GRAD0_opsz48.png" type="image/x-icon">
+    <script src="script.js" defer></script>
     <title>Library</title>
 </head>
-<body>
-    <h1 class="lib white">Library Demo</h1>
-    <div class="container">
+<body id="body">
+    <h1 class="header white" id="header">Library Demo</h1>
+    <form class="container" id="container">
         <h1 class="name white">Welcome, please enter your name?</h1>
-        <input type="text" class="user-name" name="userName" id="name-input">
-        <a href="home.html" class="go"><button class="white">GO</button></a>
-    </div>
-    <footer class="footer big white">
-        &copy; Made by <a href="http://twitter.com/theOutcast43" target="_blank" class="white big">Okey</a>
+        <input type="text" class="user-name" name="userName" id="username" onsubmit="alert(this.value)">
+        <!-- <a href="home.html" class="go"><button class="white">GO</button></a> -->
+    </form>
+    <footer class="footer big white" id="footer">
+        &copy; Made by <a href="http://twitter.com/codethematrix" target="_blank" class="green big">Okey</a>
     </footer>
 </body>
 </html>

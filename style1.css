@@ -23,11 +23,7 @@ body{
 #container{
     align-self: center;
     width: 100%;
-    display: grid;
     height: 100vh;
-    border: 20px solid #362010;
-    border-left: none;
-    border-right: none;
 }
 .big{
     font-size: 1.5rem;
@@ -39,12 +35,8 @@ body{
 .no-uline{
     text-decoration: none;
 }
-.sections{
-    display: grid;
-    place-content: center;
-    border: 5px solid #362010;
-    border-left: none;
-    border-right: none;
+.addToLib{
+    text-align: center;
 }
 .sections:hover{
     background-color: aqua;
