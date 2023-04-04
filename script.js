@@ -9,7 +9,7 @@ function submit(e) {
     handleKeyboardInput()
     }
 }
-function handleKeyboardInput() {
+const handleKeyboardInput = () => {
     openAccountModal()
 }
 
@@ -40,10 +40,14 @@ const newHTML = () => {
     secondContainer.appendChild(addToLibraryBtn);
 
 
-    secondHeader.textContent = "My Library";
+    // secondHeader.textContent = "My Library";
     // const usernameValue = document.getElementById('username').value;
     // document.getElementById('username2').innerHTML = usernameValue;
     // inputOne.value
+
+    username.oninput = function(){
+        secondHeader.innerHTML = username.value + `'s Library`;
+    }();
 }
 
 const openAccountModal = () => {
