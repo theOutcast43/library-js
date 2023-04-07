@@ -1,55 +1,15 @@
-/*class Book{
-    constructor(
-        title = 'Unknown',
-        author = 'Unkwown',
-        pages = '0',
-        status = false
-    ){
-        this.title = title
-        this.author = author
-        this.pages = pages
-        this.status = status
-    }
-}
-
-class Library {
-    constructor(){
-        this.books = [];
-    }
-    addBook(newBook){
-        if(!this.isInLibrary(newBook)){
-            this.books.push(newBook)
-        }
-    }
-    removeBook(title){
-        this.books = this.books.filter((book) => book.title !== title)
-    }
-    getBook(title){
-        return this.books.find((book) => book.title === title)
-    }
-    isInLibrary(newBook){
-        return this.books.some((book) => book.title === newBook.title)
-    }
-}*/
-
 const username = document.getElementById('username');
 
-username.onkeydown = submit;
-function submit(e) {
-    if (e.key == 'Enter') {
-        e.preventDefault()
-    handleKeyboardInput()
-    }
-}
-const handleKeyboardInput = () => {
-    openAccountModal()
-}
+
 
 const body = document.getElementById('body');
 const firstContainer = document.getElementById('container');
 const firstHeader = document.getElementById('header')
 const inputOne = document.getElementById('username');
 const firstFooter = document.getElementById('footer');
+const overlay = document.createElement('div');
+    overlay.setAttribute('id','overlay');
+    body.appendChild(overlay);
 
 const removeOldHTML = () => {
     firstContainer.remove();
@@ -62,6 +22,7 @@ const newHTML = () => {
     
     secondContainer.setAttribute('id', 'container2');
     addToLibraryBtn.classList.add('addToLib','big','white');
+    addToLibraryBtn.setAttribute('id','add-book');
     addToLibraryBtn.textContent = '+ Add Book';
     secondContainer.classList.add('container2');
     secondHeader.setAttribute('id', 'username2');
@@ -74,6 +35,8 @@ const newHTML = () => {
     username.oninput = function(){
         secondHeader.innerHTML = username.value + `'s Library`;
     }();
+
+    addToLibraryBtn.onclick = createForm;
 }
 
 const openAccountModal = () => {
@@ -91,17 +54,88 @@ function Book(title,author,pages,status){
 
 const createFormModal = () => {
     const formContainer = document.createElement('form');
+    const div = document.createElement('div');
+    const exitButton = document.createElement('h4');
     const heading = document.createElement('h3');
     const title = document.createElement('input');
     const author = document.createElement('input');
     const pages = document.createElement('input');
+    const labelStatus = document.createElement('label');
     const status = document.createElement('input');
+    const submit = document.createElement('button');
     
+    exitButton.setAttribute('id','exit');
     title.setAttribute('type','text');
+    title.setAttribute('placeholder','Title');
     author.setAttribute('type','text');
+    author.setAttribute('placeholder','Author/Writer');
     pages.setAttribute('type','number');
+    pages.setAttribute('placeholder','Pages Read')
     status.setAttribute('type','checkbox');
+    status.setAttribute('name','status');
+    submit.setAttribute('type','submit');
+    labelStatus.setAttribute('for','status');
 
     formContainer.classList.add('form-container');
-    heading.classList.add('heading-h3');
+    div.classList.add('div');
+    exitButton.classList.add('exitBtn','white');
+    heading.classList.add('head-h3','white');
+    title.classList.add('in-title');
+    author.classList.add('in-author');
+    pages.classList.add('in-pages');
+    status.classList.add('in-status');
+    submit.classList.add('in-submit','white');
+    labelStatus.classList.add('white');
+
+    exitButton.textContent = `x`;
+    heading.textContent = `Add Book`;
+    labelStatus.textContent = `Have you read this book? `;
+    submit.textContent = `Submit`;
+
+    overlay.appendChild(formContainer);
+    formContainer.appendChild(div)
+    div.appendChild(heading);
+    div.appendChild(exitButton);
+    formContainer.appendChild(title);
+    formContainer.appendChild(author);
+    formContainer.appendChild(pages);
+    formContainer.appendChild(labelStatus);
+    formContainer.appendChild(status);
+    formContainer.appendChild(submit);  
+    
+    exitButton.onclick = function() {
+        formContainer.remove();
+        heading.remove();
+        title.remove();
+        author.remove();
+        pages.remove();
+        status.remove();
+        submit.remove();
+        labelStatus.remove();
+
+        closeModal();
+    };
 }
+
+const overlayModal = () => {
+    overlay.classList.add('overlay');
+    createFormModal()
+}
+const closeModal = () => {
+    overlay.classList.remove('overlay');
+}
+function submit(e) {
+    if (e.key == 'Enter') {
+        e.preventDefault()
+    handleKeyboardInput()
+    }
+}
+const handleKeyboardInput = () => {
+    openAccountModal()
+}
+
+const createForm = () => {
+    overlayModal();
+}
+
+username.onkeydown = submit;
