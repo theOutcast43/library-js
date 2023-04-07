@@ -1,7 +1,4 @@
 const username = document.getElementById('username');
-
-
-
 const body = document.getElementById('body');
 const firstContainer = document.getElementById('container');
 const firstHeader = document.getElementById('header')
@@ -43,7 +40,6 @@ const openAccountModal = () => {
     removeOldHTML();
     newHTML();
 }
-
 
 function Book(title,author,pages,status){
     this.title = title;
@@ -105,14 +101,6 @@ const createFormModal = () => {
     
     exitButton.onclick = function() {
         formContainer.remove();
-        heading.remove();
-        title.remove();
-        author.remove();
-        pages.remove();
-        status.remove();
-        submit.remove();
-        labelStatus.remove();
-
         closeModal();
     };
 }
