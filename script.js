@@ -118,13 +118,13 @@ const newHTML = () => {
             const author2 = document.createElement('p')
             const pages2 = document.createElement('p')
             const buttonGroup = document.createElement('div')
-            const readBtn = document.createElement('button')
+            // const readBtn = document.createElement('button')
             const removeBtn = document.createElement('button')
 
             bookCard.classList.add('book-card')
             buttonGroup.classList.add('button-group')
-            readBtn.classList.add('btn')
-            removeBtn.classList.add('btn')
+            // readBtn.classList.add('btn')
+            removeBtn.classList.add('btn','white')
             // readBtn.onclick = toggleRead
             removeBtn.onclick = removeBook
             removeBtn.textContent = 'Remove'
@@ -146,7 +146,7 @@ const newHTML = () => {
             bookCard.appendChild(title2)
             bookCard.appendChild(author2)
             bookCard.appendChild(pages2)
-            buttonGroup.appendChild(readBtn)
+            // buttonGroup.appendChild(readBtn)
             buttonGroup.appendChild(removeBtn)
             bookCard.appendChild(buttonGroup)
             booksGrid.appendChild(bookCard)

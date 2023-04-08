@@ -88,8 +88,9 @@ body{
 .booksGrid{
     padding: 1%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));;
+    grid-template-columns: repeat(auto-fill, minmax(200px,1fr));;
     gap: 20px;
+    margin-top: 15px;
 }
 .book-card{
     display: grid;
@@ -98,6 +99,11 @@ body{
     border-radius: 15px;
     justify-items: center;
     row-gap: 5px;
+}
+.button-group{
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 .overlay{
     position: fixed;
@@ -157,4 +163,9 @@ button.in-submit, .btn{
     cursor: pointer;
     margin-bottom: 15px;
     padding: 0;
+}
+.button-group > .btn{
+    width: 90%;
+    margin-bottom: 7px;
+    border-radius: 8px;
 }
