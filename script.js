@@ -139,6 +139,10 @@ const newHTML = () => {
                 pages2.innerHTML = pages1.value + ` pages`;
             }();
 
+            function removeBook() {
+                bookCard.remove();
+            }
+
             bookCard.appendChild(title2)
             bookCard.appendChild(author2)
             bookCard.appendChild(pages2)
